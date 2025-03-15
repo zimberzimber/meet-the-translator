@@ -67,6 +67,10 @@ body {
     background-color: rgb(14, 17, 14);
 }
 
+#container-lower{
+    background-color: #0B0A0B;
+}
+
 .content {
     max-width: 800px;
     display: flex;
