@@ -30,6 +30,13 @@
     }
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0B0A0B;
+    color: white;
+}
+
 #translator-image {
     left: -10px;
     position: relative;
@@ -51,11 +58,6 @@
     position: absolute;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     width: 100%;
     position: relative;
@@ -65,20 +67,11 @@ body {
     background-color: rgb(14, 17, 14);
 }
 
-.textbox-color {
-    background-color: #0B0A0B;
-}
-
 .content {
     max-width: 800px;
     display: flex;
     justify-content: center;
     margin: auto;
-}
-
-#container-lower {
-    height: 100%;
-    position: fixed;
 }
 
 #dialogue-box {
@@ -119,4 +112,9 @@ textarea {
 
 .button-container:hover>.button-cursor {
     visibility: visible;
+}
+
+footer > p {
+    position: fixed;
+    bottom: 0px;
 }
