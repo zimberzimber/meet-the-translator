@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Translator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="translator.js"></script>
+    <script src="script.js" defer></script>
+    <script src="gl.js" defer></script>
+</head>
+
+<body>
+    <div id="container-upper" class="container">
+        <div class="content">
+            <image id="translator-background" src="./assets/room_bg.png"></image>
+            <canvas id="gl-canvas" width="640" height="480"></canvas>
+            <image id="translator-image" src="./assets/translator.png"></image>
+        </div>
+    </div>
+
+    <div id="container-lower" class="container textbox-color">
+        <div id="dialogue-box" class="content">
+
+            <div>
+                <textarea id="input" rows="2"></textarea>
+            </div>
+
+            <div>
+                <textarea id="output" class="blink" rows="2" disabled></textarea>
+            </div>
+
+            <div class="button-container" onclick="onClickDecode()">
+                <image class="button-cursor" src="./assets/cursor.png?x=d"></image>
+                <image class="button-text" src="./assets/decode.png?x=d"></image>
+            </div>
+            <div class="button-container" onclick="onClickEncode()">
+                <image class="button-cursor" src="./assets/cursor.png?x=d"></image>
+                <image class="button-text" src="./assets/encode.png?x=d"></image>
+            </div>
+            <div class="button-container" onclick="onClickCopyToClipboard()">
+                <image class="button-cursor" src="./assets/cursor.png"></image>
+                <image class="button-text" src="./assets/copy.png"></image>
+            </div>
+            <div class="button-container" onclick="onClickAudio()">
+                <image class="button-cursor" src="./assets/cursor.png"></image>
+                <image class="button-text" src="./assets/audio.png"></image>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" autoplay loop>
+        <source src="./assets/NO-SKIN - Red Room.mp3" type="audio/mp3">
+    </audio>
+</body>
+
+</html>

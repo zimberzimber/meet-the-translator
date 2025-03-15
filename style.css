@@ -1,0 +1,122 @@
+@keyframes moveRight {
+    0% {
+        left: -10px;
+    }
+
+    30% {
+        left: 10px;
+    }
+
+    50% {
+        left: 10px;
+    }
+
+    90% {
+        left: -10px;
+    }
+}
+
+@keyframes flash-invalid {
+    0% {
+        color: red;
+        background-color: red;
+    }
+}
+
+@keyframes flash-copy {
+    0% {
+        color: white;
+        background-color: white;
+    }
+}
+
+#translator-image {
+    left: -10px;
+    position: relative;
+    animation: moveRight 6s linear infinite;
+    animation-timing-function: steps(3);
+    width: 100%;
+    image-rendering: pixelated;
+    z-index: 1;
+}
+
+#translator-background {
+    position: absolute;
+    width: 30%;
+    image-rendering: pixelated;
+    z-index: 0;
+}
+
+#gl-canvas {
+    position: absolute;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+#container-upper {
+    background-color: rgb(14, 17, 14);
+}
+
+.textbox-color {
+    background-color: #0B0A0B;
+}
+
+.content {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#container-lower {
+    height: 100%;
+    position: fixed;
+}
+
+#dialogue-box {
+    width: 100%;
+    padding-top: 1rem;
+    display: block;
+}
+
+textarea {
+    /* all: unset; */
+    background-color: rgb(14, 17, 14);
+    width: 100%;
+    font-size: larger;
+    color: white;
+    resize: vertical;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.button-container {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-container>* {
+    image-rendering: pixelated;
+    width: 10rem;
+}
+
+.button-container>.button-cursor {
+    visibility: hidden;
+    position: absolute;
+    left: -10.5rem;
+}
+
+.button-container:hover>.button-cursor {
+    visibility: visible;
+}
